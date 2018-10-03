@@ -45,18 +45,16 @@ The neural network parameters were not optimized also.
 
 ## Rewards
 
-Based on the plot below, the agent is able to receive an average reward (over 100 episodes, and over all 20 agents) of about +35. The required performance of +30 is achieved after 80 episodes.
+Based on the plot below, the agent is able to get an average reward (over 100 episodes, and over all 20 agents) of about +35. The required performance of +30 is achieved after 75 episodes.
 
 ![Score History](./images/score_history.PNG)
 
-The training was performed for 200 episodes and took 65 minutes. The "bottlneck" of the computations seems to be the sampling from the `ReplayBuffer`. Increase of the `BATCH_SIZE` improved the learning per episode but increased significantly the processing time per episode. As the cumulative effect was slower learning the initial `BATCH_SIZE = 128` was preserved.
+The training was performed for 200 episodes. Increase of the `BATCH_SIZE` improved the learning per episode but increased significantly the processing time per episode. As the cumulative effect was slower learning the initial `BATCH_SIZE = 128` was preserved.
 
-## Ideas for future ork
+## Ideas for future work
 
 The agent's performance could be further improved by using standard techniques for better neural network training:
  - continue the training with reduced learning rates `LR_ACTOR` and `LR_CRITIC`
  - increase the `BATCH_SIZE` by two orders of magnitude (very slow at the current implementation)
  - add dropout layers or other forms of regularization in the model;
  - try more layers or more activations per layer
-
-In addition completely different deep reinforced learning algorithms applicable for continuous control tasks can be explored (e.g. see [3])
