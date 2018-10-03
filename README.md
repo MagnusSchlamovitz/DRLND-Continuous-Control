@@ -3,26 +3,16 @@ Continuous Control Project
 
 [//]: # (Image References)
 
-For this project, I will work with the [Reacher]() environment.
-
-
-# Train a robotic arm to reach target locations
-
-This repository contains material related to the **Continuous Control** project of the Udacity's [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) program.  
+For this project, I will work with the Reacher environment.
 
 ![Trained Agents](./images/scene.png)
 
 
+## The Environment
 
-## Project Details
-
-In this environment, a double-jointed arm can move to target locations. The simulation contains 20 identical agents, each with its own copy of the environment.
-
-A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of the agent is to maintain its position at the target location for as many time steps as possible. The task is episodic, and in order to solve the environment, **the agents must get an average score of +30** (over 100 consecutive episodes, and over all agents). The perfect score is +100 (task dutation of 1000 steps x 0.01 reward each).
+In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
 The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
-
-To solve the problem we have used the resources listed in the References section of this document.
 
 ## Dependencies
 
