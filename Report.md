@@ -41,8 +41,6 @@ Below are the default training hyperparameters:
     LR_CRITIC = 1e-3        # learning rate of the critic
     WEIGHT_DECAY = 0        # L2 weight decay
 
-The neural network parameters were not optimized also.
-
 ## Rewards
 
 Based on the plot below, the agent is able to get an average reward (over 100 episodes, and over all 20 agents) of about +35. The required performance of +30 is achieved after 75 episodes.
