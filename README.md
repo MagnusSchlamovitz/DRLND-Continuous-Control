@@ -24,16 +24,16 @@ To set up your python environment to run the code in this repository, follow the
 #### 1. Create (and activate) a new environment with Python 3.6.
 
 __Linux__ or __Mac:__
-	```bash
-	conda create --name drlnd python=3.6
-	source activate drlnd
-	```
+```bash
+conda create --name drlnd python=3.6
+source activate drlnd
+```
 	
-	__Windows:__
-	```bash
-	conda create --name drlnd python=3.6 
-	activate drlnd
-	```
+__Windows:__
+```bash
+conda create --name drlnd python=3.6 
+activate drlnd
+```
 
 #### 2. Clone the repository (if you haven't already), and navigate to the `python/` folder.  Then, install several dependencies.
 
@@ -53,20 +53,30 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 You need only select the environment that matches your operating system:
 
 ##### Version 1: One (1) Agent
+
 Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
+
 Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip)
+
 Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
+
 Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
 
+
 ##### Version 2: Twenty (20) Agents
+
 Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
+
 Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip)
+
 Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)
+
 Windows (64-bit): [click here]()
+
 
 This project uses rich simulation environments from [Unity ML-Agents](https://github.com/Unity-Technologies/ml-agents) but you will not need to install Unity - the environment is already built into the downloaded file.
 
-5. If you plan to play with the OpenAI gym examples, follow the instructions in [this repository](https://github.com/openai/gym):
+#### 5. If you plan to play with the OpenAI gym examples, follow the instructions in [this repository](https://github.com/openai/gym):
     - perform a minimal install of OpenAI gym:
 ```bash
 git clone https://github.com/openai/gym.git
