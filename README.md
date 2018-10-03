@@ -52,7 +52,7 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 
 You need only select the environment that matches your operating system:
 
-##### Version 1: One (1) Agent
+__Version 1: One (1) Agent__
 
 Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
 
@@ -63,7 +63,7 @@ Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/
 Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
 
 
-##### Version 2: Twenty (20) Agents
+__Version 2: Twenty (20) Agents__
 
 Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
 
@@ -77,17 +77,20 @@ Windows (64-bit): [click here]()
 This project uses rich simulation environments from [Unity ML-Agents](https://github.com/Unity-Technologies/ml-agents) but you will not need to install Unity - the environment is already built into the downloaded file.
 
 #### 5. If you plan to play with the OpenAI gym examples, follow the instructions in [this repository](https://github.com/openai/gym):
-    - perform a minimal install of OpenAI gym:
+
+- perform a minimal install of OpenAI gym:
 ```bash
 git clone https://github.com/openai/gym.git
 cd gym
 pip install -e .
 ```    
-	- install the **classic control** environment group:
+
+- install the **classic control** environment group:
 ```bash
 pip install -e '.[classic_control]'
 ```
-	- install the **box2d** environment group:
+
+- install the **box2d** environment group:
 ```bash
 pip install -e '.[box2d]'
 ```
@@ -99,8 +102,3 @@ pip install -e '.[box2d]'
 2. Before running code in the notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
 
   ![Kernel][image2]
-
-3. To train the Agent execute:
-  - Sections 1. Start the Environment
-  - Section 2. Examine the State and Action Spaces
-  - Section 3. Train the Agent with DDPG 
