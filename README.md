@@ -5,7 +5,7 @@ Continuous Control Project
 
 For this project, I will work with the Reacher environment.
 
-![Trained Agents](./images/scene.png)
+![Trained Agents](./images/reacher.gif)
 
 
 ## The Environment
@@ -95,4 +95,4 @@ pip install -e '.[box2d]'
 
 2. Before running code in the notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
 
-  ![Kernel][image2]
+  ![Kernel][./images/jupyter.png)
