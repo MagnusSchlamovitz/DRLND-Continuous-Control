@@ -47,7 +47,7 @@ The neural network parameters were not optimized also.
 
 Based on the plot below, the agent is able to receive an average reward (over 100 episodes, and over all 20 agents) of about +35. The required performance of +30 is achieved after 80 episodes.
 
-![Score History](./images/score_history.png)
+![Score History](./images/score_history.PNG)
 
 The training was performed for 200 episodes and took 65 minutes. The "bottlneck" of the computations seems to be the sampling from the `ReplayBuffer`. Increase of the `BATCH_SIZE` improved the learning per episode but increased significantly the processing time per episode. As the cumulative effect was slower learning the initial `BATCH_SIZE = 128` was preserved.
 
