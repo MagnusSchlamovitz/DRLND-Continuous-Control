@@ -3,6 +3,7 @@ Continuous Control Project
 
 [//]: # (Image References)
 
+For this project, I will work with the [Reacher]() environment.
 
 
 # Train a robotic arm to reach target locations
