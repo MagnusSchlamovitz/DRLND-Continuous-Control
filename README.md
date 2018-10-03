@@ -3,8 +3,7 @@ Continuous Control Project
 
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/42135602-b0335606-7d12-11e8-8689-dd1cf9fa11a9.gif "Trained Agents"
-[image2]: C:\Users\acer\Desktop\DRLND\continuous_control_images "Kernel"
+
 
 # Train a robotic arm to reach target locations
 
