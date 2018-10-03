@@ -1,10 +1,9 @@
 
-# Continuous Control
-## Train an robotic arm to reach target locations by Krasin Georgiev
+# Continuous Control 
 
-This report describes an implementation of the **Continuous Control** project from the Udacity's [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) program.  
+This report describes the details of my implementation of the **Continuous Control** project from the Udacity's [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) program, along with ideas for future work.  
 
-![Trained Agents](./images/scene.png)
+![Trained Agents](./images/reacher.gif)
 
 ## Learning Algorithm
 
