@@ -21,7 +21,8 @@ This is an amended version of the python/ folder from the [ML-Agents repository]
 
 To set up your python environment to run the code in this repository, follow the instructions below.
 
-1. Create (and activate) a new environment with Python 3.6.
+#### 1. Create (and activate) a new environment with Python 3.6.
+
 	__Linux__ or __Mac:__
 	```bash
 	conda create --name drlnd python=3.6
@@ -34,21 +35,36 @@ To set up your python environment to run the code in this repository, follow the
 	activate drlnd
 	```
 
-2. Clone the repository (if you haven't already!), and navigate to the `python/` folder.  Then, install several dependencies.
+#### 2. Clone the repository (if you haven't already), and navigate to the `python/` folder.  Then, install several dependencies.
+
 ```bash
 git clone https://github.com/udacity/deep-reinforcement-learning.git
 cd deep-reinforcement-learning/python
 pip install .
 ```
 
-3. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.  
+#### 3. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.  
 ```bash
 python -m ipykernel install --user --name drlnd --display-name "drlnd"
 ```
 
-4. Download the Unity Environment:
+#### 4. Download the Unity Environment
 
-    Download [this file](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip) for Linux operating system. Decompress in the same folder where the project files are. This project uses rich simulation environments from [Unity ML-Agents](https://github.com/Unity-Technologies/ml-agents) but you will not need to install Unity - the environment is already built into the downloaded file.
+You need only select the environment that matches your operating system:
+
+##### Version 1: One (1) Agent
+Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
+Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip)
+Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
+Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
+
+##### Version 2: Twenty (20) Agents
+Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
+Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip)
+Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)
+Windows (64-bit): [click here]()
+
+This project uses rich simulation environments from [Unity ML-Agents](https://github.com/Unity-Technologies/ml-agents) but you will not need to install Unity - the environment is already built into the downloaded file.
 
 5. If you plan to play with the OpenAI gym examples, follow the instructions in [this repository](https://github.com/openai/gym):
     - perform a minimal install of OpenAI gym:
