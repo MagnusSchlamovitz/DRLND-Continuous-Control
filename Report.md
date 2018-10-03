@@ -8,7 +8,7 @@ This report describes an implementation of the **Continuous Control** project fr
 
 ## Learning Algorithm
 
-The task was solved using the Actor-Critic method Deep Deterministic Policy Gradients (DDPG, [1]). The agent is composed of an Actor and a Critic networks. The Actor network is used to calculate the action based on the current state. The Critic network is used to predict the Q-value, i.e. the value of the current (state, action). The negative of the Q-value is used as a loss measure for training the Actor network. To measure the loss of the Critic network, a "true" or target Q-value is calculated using the Bellman equation, which in pseudocode looks like `Q_targets = rewards + gamma * critic_target(next_states, actions_next)`
+The task was solved using the Actor-Critic method Deep Deterministic Policy Gradients. The agent is composed of two networks: Actor and Critic. The Actor network is used to calculate the action based on the current state. The Critic network is used to predict the Q-value, i.e. the value of the current (state, action). The negative of the Q-value is used as a loss measure for training the Actor network. To measure the loss of the Critic network, a "true" or target Q-value is calculated using the Bellman equation.
 
 ### The Actor network
 
@@ -24,47 +24,15 @@ The input to the first layer was the state (33 units) and the output had 400 act
 
 ### Training
 
-The training algorithm is implemented in the function `ddpg()`. The interaction with the envoronment is similar to the one from [the previons project](https://github.com/krasing/DRLearningNavigation/blob/master/Report.ipynb). The differences are in the agent as defined in `class Agents()` based on the algorithm in [2]:
- - at each step the experience from all agents is collected into the buffer memory. Then a sample from the memory is taken and the learning method `self.learn(experiences, GAMMA)` is called
- - the action function `act()` infolves calculation of the action for all agents. The local Actor network `actor_local(state)` is called in a loop. Additional noise of class `OUNoise()` is added to explore the action space.
+The training algorithm is implemented in the function `ddpg()`. 
 
 ### Learning
 
 Learning is performed by the `learn()` method of the `Agent()` class.
-The loss function and the gradient propagations worth further consideration. Explore how this implementation in code corresponds to *Algorithm 1* in [1]. (More explanations to be added here!)
-
-in `_init__()`:
-``` python
-self.actor_optimizer = optim.Adam(self.actor_local.parameters(), lr=LR_ACTOR)
-self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=LR_CRITIC, weight_decay=WEIGHT_DECAY)
-```
-
-in `learn()`:
-```python
-    # ---------------------------- update critic ---------------------------- #
-    # Compute critic loss
-    Q_expected = self.critic_local(states, actions)
-    critic_loss = F.mse_loss(Q_expected, Q_targets)
-    # Minimize the loss
-    self.critic_optimizer.zero_grad()
-    critic_loss.backward()
-    self.critic_optimizer.step()
-```
-
-``` python
-    # ---------------------------- update actor ---------------------------- #
-    # Compute actor loss
-    actions_pred = self.actor_local(states)
-    actor_loss = -self.critic_local(states, actions_pred).mean()
-    # Minimize the loss
-    self.actor_optimizer.zero_grad()
-    actor_loss.backward()
-    self.actor_optimizer.step()
-```
 
 ### Hyperparameters
 
-I have not played with the dafault training hyperparameters:
+Below are the default training hyperparameters:
 
     BUFFER_SIZE = int(1e5)  # replay buffer size
     BATCH_SIZE = 128        # minibatch size
@@ -76,15 +44,15 @@ I have not played with the dafault training hyperparameters:
 
 The neural network parameters were not optimized also.
 
-## Plot of Rewards
+## Rewards
 
-A plot below shows that the agent is able to receive an average reward (over 100 episodes, and over all 20 agents) of about +35. The required performance of +30 is achieved after 80 episodes.
+Based on the plot below, the agent is able to receive an average reward (over 100 episodes, and over all 20 agents) of about +35. The required performance of +30 is achieved after 80 episodes.
 
-![Rewards per episode](./images/scores_history.png)
+![Rewards per episode](./images/score_history.png)
 
 The training was performed for 200 episodes and took 65 minutes. The "bottlneck" of the computations seems to be the sampling from the `ReplayBuffer`. Increase of the `BATCH_SIZE` improved the learning per episode but increased significantly the processing time per episode. As the cumulative effect was slower learning the initial `BATCH_SIZE = 128` was preserved.
 
-## Ideas for Future Work
+## Ideas for future ork
 
 The agent's performance could be further improved by using standard techniques for better neural network training:
  - continue the training with reduced learning rates `LR_ACTOR` and `LR_CRITIC`
