@@ -95,4 +95,4 @@ pip install -e '.[box2d]'
 
 2. Before running code in the notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
 
-  ![Kernel](./images/jupyter.png)
+  ![Kernel](./images/jupyter.PNG)
